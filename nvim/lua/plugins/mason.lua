@@ -59,10 +59,10 @@ return {
         vim.keymap.set("n", "<leader>gD", vim.lsp.buf.declaration, opts) -- go to declaration
 
         opts.desc = "Lsp: Show LSP definitions"
-        vim.keymap.set("n", "<leader>gd", "<cmd>Telescope lsp_definitions<CR>", opts) -- show lsp definitions
+        vim.keymap.set("n", "<leader>gd", vim.lsp.buf.definition, opts) -- show lsp definitions
 
         opts.desc = "Lsp: Show LSP implementations"
-        vim.keymap.set("n", "<leader>gi", "<cmd>Telescope lsp_implementations<CR>", opts) -- show lsp implementations
+        vim.keymap.set("n", "<leader>gi", vim.lsp.buf.implementation, opts) -- show lsp implementations
 
         opts.desc = "Lsp: Show LSP type definitions"
         vim.keymap.set("n", "<leader>t", "<cmd>Telescope lsp_type_definitions<CR>", opts) -- show lsp type definitions
