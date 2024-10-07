@@ -38,7 +38,7 @@ return {
         "gofumpt",
         "delve",
         "lua-language-server",
-        "stylua"
+        "stylua",
       }
     })
 

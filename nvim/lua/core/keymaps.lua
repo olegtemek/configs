@@ -6,7 +6,7 @@ opts.desc = "General: Go back"
 keymap.set("n", "<leader>gb", "<cmd>pop<CR>", opts)
 
 opts.desc = "General: Save file"
-keymap.set("n", "<leader>s", "<cmd>w<CR>", opts)
+keymap.set("n", "<leader>s", "<cmd>w<CR><cmd>w<CR>", opts)
 
 opts.desc = "General: Quit file"
 keymap.set("n", "<leader>q", "<cmd>q<CR>", opts)

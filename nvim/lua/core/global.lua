@@ -4,14 +4,14 @@ vim.g.mapleader = " "
 vim.api.nvim_set_option("clipboard", "unnamed")
 
 -- set icon for breakpoints
-vim.fn.sign_define('DapBreakpoint', {text='🛑', texthl='', linehl='', numhl=''})
+vim.fn.sign_define('DapBreakpoint', { text = '🛑', texthl = '', linehl = '', numhl = '' })
 
 -- for autoimport packages golang
 vim.api.nvim_create_autocmd({ "BufWritePost" }, {
   pattern = "*.go",
   callback = function()
     local params = vim.lsp.util.make_range_params()
-    params.context = {only = {"source.organizeImports"}}
+    params.context = { only = { "source.organizeImports" } }
     -- buf_request_sync defaults to a 1000ms timeout. Depending on your
     -- machine and codebase, you may want longer. Add an additional
     -- argument after params if you find that you have to write the file
@@ -26,15 +26,15 @@ vim.api.nvim_create_autocmd({ "BufWritePost" }, {
         end
       end
     end
-    vim.lsp.buf.format({async = false})
+    vim.lsp.buf.format({ async = false })
   end
 })
 
 vim.api.nvim_create_autocmd('CursorMoved', {
   group = vim.api.nvim_create_augroup('auto-hlsearch', { clear = true }),
-  callback = function ()
+  callback = function()
     if vim.v.hlsearch == 1 and vim.fn.searchcount().exact_match == 0 then
-      vim.schedule(function () vim.cmd.nohlsearch() end)
+      vim.schedule(function() vim.cmd.nohlsearch() end)
     end
   end
 })
