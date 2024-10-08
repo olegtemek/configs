@@ -25,7 +25,7 @@ return {
           ["l"] = "open",
         }
       },
-      event_handlers = {
+      evet_handlers = {
         {
           event = "file_open_requested",
           handler = function()

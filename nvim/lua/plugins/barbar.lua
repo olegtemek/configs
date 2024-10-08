@@ -7,7 +7,7 @@ return {
     },
     init = function()
       vim.g.barbar_auto_setup = false
-      vim.keymap.set("n", "<leader>w", ':w<CR><cmd>BufferClose<CR>', { desc = "Barbar: Close tab" })
+      vim.keymap.set("n", "<leader>w", ':w!<CR><cmd>BufferClose<CR>', { desc = "Barbar: Close tab" })
       vim.keymap.set("n", "<leader><TAB>", "<cmd>BufferNext<CR>", { desc = "Barbar: Switch tab" })
     end,
     opts = {
