@@ -11,7 +11,7 @@ keymap.set("n", "<leader>s", "<cmd>w<CR><cmd>w<CR>", opts)
 opts.desc = "General: Quit file"
 keymap.set("n", "<leader>q", "<cmd>q<CR>", opts)
 
-opts.desc = "General: Inser mode"
+opts.desc = "General: Insert mode"
 keymap.set("i", "jj", "<ESC>", opts)
 
 opts.desc = "General: Add tab in line"
